@@ -1,0 +1,48 @@
+<h1>Upload Your Cat!!</h1>
+
+
+<form action="<%=cats_url%>" method="POST">
+
+    <label>
+        Name:
+        <input  type="text" name="cat[name]"/>
+    </label>
+
+    <br>
+    <br>
+
+    <label > Color:
+    <select name="cat[color]">
+        <option disabled selected>--pick color--</option>
+        <option value="black">black</option>
+        <option value="brown">brown</option>
+        <option value="orange">orange</option>
+        <option value="tiger_stripes">tiger stripes</option>
+    </select>
+    </label>
+
+    <br>
+    <br>
+
+    <label>
+        Birthdate:
+        <input  type="date" name="cat[birth_date]"/>
+    </label>
+
+    <br>
+    <br>
+
+    <label>
+        Sex:
+    <input  type="radio" name="cat[sex]" value="M"/>M
+    <input  type="radio" name="cat[sex]" value="F"/>F
+    </label>
+        <br><br>
+    <label for="description">Description o Personality:</label>
+       
+    <textarea name="cat[description]" id="description"></textarea>
+
+    
+
+    <button>Official Upload Button</button>
+</form>

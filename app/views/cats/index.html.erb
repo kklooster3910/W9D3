@@ -1,0 +1,7 @@
+<h1> Kitties Index! </h1>
+
+<ul>
+    <% @kitties.each do |kitty| %>
+        <li><%= kitty.name %> <a href="<%=cat_url(kitty.id)%>">Peeps cat</a> </li>
+    <% end %>
+</ul>

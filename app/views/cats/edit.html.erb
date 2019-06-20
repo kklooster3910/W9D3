@@ -1,0 +1,49 @@
+<h1>Editing Your Cat</h1>
+
+<form action="<%=cat_url(@kitty.id) %>" method="POST">
+
+    <input type="hidden" name="_method" value="PUT">
+
+    <label>
+        Name:
+        <input  type="text" name="cat[name]" value="<%=@kitty.name %>"/>
+    </label>
+
+    <br>
+    <br>
+
+    <label > Color:
+    <select name="cat[color]">
+        <option disabled selected>--pick color--</option>
+        <option value="black">black</option>
+        <option value="brown">brown</option>
+        <option value="orange">orange</option>
+        <option value="tiger_stripes">tiger stripes</option>
+    </select>
+    </label>
+
+    <br>
+    <br>
+
+    <label>
+        Birthdate:
+        <input  type="date" name="cat[birth_date]" value="<%=@kitty.birth_date %>"/>
+    </label>
+
+    <br>
+    <br>
+
+    <label>
+        Sex:
+    <input  type="radio" name="cat[sex]" value="M"/>M
+    <input  type="radio" name="cat[sex]" value="F"/>F
+    </label>
+        <br><br>
+    <label for="description">Description o Personality:</label>
+       
+    <textarea name="cat[description]" id="description" > <%=@kitty.description %> </textarea>
+
+    
+
+    <button>Official Cat Update Button</button>
+</form>
